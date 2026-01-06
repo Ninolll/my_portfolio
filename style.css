@@ -135,7 +135,7 @@ h2 {
   font-weight: 600;
 }
 
-/* Skills Section (NEW) */
+/* Skills Section */
 .skills-section h2 {
   margin-bottom: 1rem;
   border-bottom: none;
@@ -197,7 +197,49 @@ h2 {
   height: 24px;
 }
 
-/* Projects (Grid Layout) */
+/* Education (Simple Style) */
+.edu-simple-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: border-color 0.2s;
+}
+.edu-simple-card:hover {
+  border-color: var(--accent-color);
+}
+.edu-degree {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.edu-school {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+.edu-time {
+  font-family: var(--font-code);
+  color: #9ca3af;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  margin-left: 1.5rem;
+  font-weight: 500;
+}
+@media (max-width: 600px) {
+  .edu-simple-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .edu-time {
+    margin-left: 0;
+  }
+}
+
+/* Projects Section */
 .project-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -265,38 +307,6 @@ h2 {
   padding: 4px 10px;
   border-radius: 6px;
   font-weight: 500;
-}
-
-/* Experience */
-.exp-item {
-  display: flex;
-  margin-bottom: 1.75rem;
-  flex-direction: column;
-}
-@media (min-width: 600px) {
-  .exp-item {
-    flex-direction: row;
-  }
-}
-.exp-item .date {
-  min-width: 150px;
-  color: #9ca3af;
-  font-family: var(--font-code);
-  font-size: 0.9rem;
-  margin-bottom: 0.25rem;
-  font-weight: 500;
-}
-.exp-details {
-  flex: 1;
-}
-.exp-details strong {
-  display: block;
-  margin-bottom: 0.4rem;
-  font-size: 1.05rem;
-}
-.exp-details p {
-  color: var(--text-secondary);
-  font-size: 1rem;
 }
 
 /* Contact Section */
